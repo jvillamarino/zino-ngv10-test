@@ -1,0 +1,25 @@
+<div class="content">
+  <h2 class="zino-title">Iniciar Sesión</h2>
+  <form (ngSubmit)="login($event)" [formGroup]="form" fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field appearance="standard" class="zino-inputs">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="@jvillamarin" formControlName="user">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>Usuario: admin</mat-hint>
+      <mat-error *ngIf="form.invalid">El usuario es: admin</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs">
+      <mat-label>Contraserña</mat-label>
+      <input matInput placeholder="*****" formControlName="password">
+      <mat-icon matSuffix>vpn_key</mat-icon>
+      <mat-hint>Contraseña: admin</mat-hint>
+      <mat-error *ngIf="form.invalid">La contraseña es: admin</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Iniciar</button>
+  </form>
+<div class="zino-redirect">
+    <a [routerLink]="['/auth/register']" routerLinkActive="router-link-active">
+      ¿Aún no tiene cuenta? Crear cuenta
+    </a>
+</div>
+</div>

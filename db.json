@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "DNI": "0001",
+      "NAME": "JESUS",
+      "SURNAME": "VILLAMARIN ",
+      "SECOND_SURNAME": "ORTIZ",
+      "EMAIL": "j.villamarin@outlook.com",
+      "PAYMENT_DATE": "2020-07-23T05:00:00.000Z",
+      "id": 1
+    },
+    {
+      "DNI": "0002",
+      "NAME": "ANGEL",
+      "SURNAME": "REY",
+      "SECOND_SURNAME": "GUTI",
+      "EMAIL": "mail@mail.com",
+      "PAYMENT_DATE": "",
+      "id": 2
+    },
+    {
+      "DNI": "0003",
+      "NAME": "Luis Miguel",
+      "SURNAME": "Suarez",
+      "SECOND_SURNAME": "Mora",
+      "EMAIL": "j.villamarin@outlook.com",
+      "PAYMENT_DATE": "2020-07-30T05:00:00.000Z",
+      "id": 3
+    },
+    {
+      "DNI": "0004",
+      "NAME": "Josue",
+      "SURNAME": "Jimenez",
+      "SECOND_SURNAME": "Jimenez",
+      "EMAIL": "email@outlook.com",
+      "PAYMENT_DATE": "",
+      "id": 4
+    },
+    {
+      "DNI": "0005",
+      "NAME": "Miguel",
+      "SURNAME": "Angel",
+      "SECOND_SURNAME": "Zorro",
+      "EMAIL": "email@email.com",
+      "PAYMENT_DATE": "",
+      "id": 5
+    },
+    {
+      "DNI": "0006",
+      "NAME": "Luis Angel",
+      "SURNAME": "Sanchez",
+      "SECOND_SURNAME": "Tapia",
+      "EMAIL": "e@email.com",
+      "PAYMENT_DATE": "",
+      "id": 6
+    },
+    {
+      "DNI": "fasdfafdfa",
+      "NAME": "fadsf",
+      "SURNAME": "fdafaf",
+      "SECOND_SURNAME": "fadsfa",
+      "EMAIL": "email@email.com",
+      "PAYMENT_DATE": "",
+      "id": 7
+    }
+  ],
+  "credits": [
+    {
+      "PAYMENT_DATE": "23/07/2020",
+      "DNI": "0001",
+      "VALUE": 10297891,
+      "IS_PAID": null,
+      "userId": 1,
+      "STATUS": 1,
+      "id": 1
+    },
+    {
+      "PAYMENT_DATE": null,
+      "DNI": "0002",
+      "VALUE": 2180971,
+      "IS_PAID": null,
+      "userId": 2,
+      "STATUS": 0,
+      "id": 2
+    },
+    {
+      "PAYMENT_DATE": "30/07/2020",
+      "DNI": "0003",
+      "VALUE": 4606945,
+      "IS_PAID": null,
+      "userId": 3,
+      "STATUS": 0,
+      "id": 3
+    },
+    {
+      "PAYMENT_DATE": null,
+      "DNI": "0004",
+      "VALUE": 6371289,
+      "IS_PAID": null,
+      "userId": 4,
+      "STATUS": 0,
+      "id": 4
+    },
+    {
+      "PAYMENT_DATE": null,
+      "DNI": "0005",
+      "VALUE": 1739885,
+      "IS_PAID": null,
+      "userId": 5,
+      "STATUS": 1,
+      "id": 5
+    },
+    {
+      "PAYMENT_DATE": null,
+      "DNI": "0006",
+      "VALUE": 9708128,
+      "IS_PAID": null,
+      "userId": 6,
+      "STATUS": 0,
+      "id": 6
+    },
+    {
+      "PAYMENT_DATE": null,
+      "DNI": "fasdfafdfa",
+      "VALUE": 15547280,
+      "IS_PAID": null,
+      "userId": 7,
+      "STATUS": 0,
+      "id": 7
+    }
+  ]
+}

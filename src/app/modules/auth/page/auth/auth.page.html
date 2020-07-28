@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <div fxFlex="60" fxLayout="column" fxLayoutAlign="center center" class="zino-brand">
+    <img src="assets/img/zinobe.png" alt="Zinobe - Entididad de Crédito">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Neque recusandae saepe pariatur expedita
+      nullaassumenda, illo nisi natus. <br> Perferendis veniam odit dicta temporibus atque incidunt in
+      exercitationem enim optio delectus?</p>
+  </div>
+  <div fxFlex="1 1 100" class="zino-router" fxLayout="row" fxLayoutAlign="center center"
+    [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+</div>

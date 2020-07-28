@@ -1,0 +1,15 @@
+:host{
+  width: 100%;
+}
+.content{
+  height: 100%;
+  h2.zino-title{
+    text-align: center;
+    margin: .9rem;
+    color: #111e28;
+    font-size: 2rem;
+  }
+  mat-form-field.zino-inputs{
+    width: 50%;
+  }
+}

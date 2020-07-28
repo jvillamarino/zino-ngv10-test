@@ -1,0 +1,47 @@
+<div class="content">
+  <h2 class="zino-title">Crear cuenta</h2>
+  <form [formGroup]="form" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="70">
+      <mat-label>Cédula de Ciudadania</mat-label>
+      <input matInput placeholder="2312..." formControlName="DNI">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>C.C. 104300302</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="70">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Jesú..." formControlName="NAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Miguel Alberto</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="34">
+      <mat-label>Apellido Paterno</mat-label>
+      <input matInput placeholder="Pere..." formControlName="SURNAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Peter</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="34">
+      <mat-label>Apellido Materno</mat-label>
+      <input matInput placeholder="Guti..." formControlName="SECOND_SURNAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Albeiro</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="70">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput placeholder="email@em..." formControlName="EMAIL">
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-hint>P.ej: j.villamarin@outlook.com</mat-hint>
+    </mat-form-field>
+    <div fxFlex="70" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-raised-button color="primary" type="submit" [swal]="['Lo sentimos😔😔', 'Está funcionalidad apenas viene en camino. 😁',
+        'error']">
+        Crear
+      </button>
+    </div>
+  </form>
+
+  <div class="zino-redirect">
+    <a [routerLink]="['/auth/login']" routerLinkActive="router-link-active">
+      Ya tengo cuenta.
+    </a>
+  </div>
+</div>

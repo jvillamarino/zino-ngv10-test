@@ -1,0 +1,33 @@
+<div class="grid-container">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h1 class="mat-h1">Dashboard</h1>
+    <button mat-raised-button color="primary" (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+      Solicitar Crédito
+    </button>
+  </div>
+  <mat-grid-list cols="2" rowHeight="450px">
+    <mat-grid-tile *ngFor="let card of cards | async; let i=index" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div [ngSwitch]="i">
+            <div *ngSwitchCase='0'>
+              <app-list-user [evtEmitter]="evtEmitter"></app-list-user>
+            </div>
+            <div *ngSwitchCase='1'>
+              <app-list-request [statusRequest]='0' [evtEmitter]="evtEmitter"></app-list-request>
+            </div>
+            <div *ngSwitchCase='2'>
+              <app-list-request [statusRequest]='1' [evtEmitter]="evtEmitter"></app-list-request>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

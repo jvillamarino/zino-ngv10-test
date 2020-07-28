@@ -1,0 +1,59 @@
+<h1 mat-dialog-title style="text-align: center;">Formulario de Solicitud</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <h3 fxFlex="100" style="margin: 0;">Datos personales</h3>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="80">
+      <mat-label>Cédula de Ciudadania</mat-label>
+      <input required matInput placeholder="2312..." formControlName="DNI">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>C.C. 104300302</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="80">
+      <mat-label>Nombre</mat-label>
+      <input required matInput placeholder="Jesú..." formControlName="NAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Miguel Alberto</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="39">
+      <mat-label>Apellido Paterno</mat-label>
+      <input required matInput placeholder="Pere..." formControlName="SURNAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Peter</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="39">
+      <mat-label>Apellido Materno</mat-label>
+      <input required matInput placeholder="Guti..." formControlName="SECOND_SURNAME">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-hint>P.ej: Albeiro</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="80">
+      <mat-label>Correo Electrónico</mat-label>
+      <input required matInput placeholder="email@em..." formControlName="EMAIL">
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-hint>P.ej: j.villamarin@outlook.com</mat-hint>
+    </mat-form-field>
+    <br>
+    <span fxFlex="100">
+      <h3>Crédito</h3>
+    </span>
+    <mat-form-field color="primary" appearance="standard" fxFlex="80">
+      <mat-label>Fecha de Pago</mat-label>
+      <input matInput [matDatepicker]="picker1" formControlName="PAYMENT_DATE">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="zino-inputs" fxFlex="80">
+      <mat-label>Cantidad a solicitar</mat-label>
+      <input matInput placeholder="2312..." [ngModel]="value | currency:'USD':'symbol-narrow'"
+        (ngModelChange)="value = $event" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <div fxFlex=" 82">
+      <!-- <ng5-slider id="slider" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider> -->
+      <ng5-slider id="slider" [(value)]="value" [options]="options"></ng5-slider>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="createRequest()">Crear</button>
+</div>

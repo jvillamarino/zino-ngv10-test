@@ -1,0 +1,39 @@
+<div fxLayout="row" fxLayoutAlign="center center" *ngIf="!isDataAvaible" style="margin-top: 10rem;">
+  <h3>¡No hay información para mostrar!</h3>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="mat-elevation-z8" [fxHide]="!isDataAvaible">
+  <table mat-table class="full-width-table" matSort aria-label="Elements" [dataSource]="dataSource"
+    *ngIf="isDataAvaible">
+    <ng-container matColumnDef="{{column}}" *ngFor="let column of displayedColumns; let i=index;">
+      <div *ngIf="i === 0">
+        <td mat-cell *matCellDef="let element"
+          [ngStyle]="{'border-left': statusRequest ? '2px solid #68d866': '2px solid #ec4646'}">
+          {{element[column]}}
+        </td>
+      </div>
+      <div *ngIf="i === 2">
+        <td mat-cell *matCellDef="let element">
+          {{element[column] | currency:'USD':'symbol-narrow'}}
+        </td>
+      </div>
+      <div *ngIf="i === 3">
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" [swal]="['Lo sentimos😔😔', 'Está funcionalidad apenas viene en camino. 😁',
+          'error']">
+            <mat-icon>attach_money</mat-icon>
+          </button>
+          {{element[column] | currency:'USD':'symbol-narrow'}}
+        </td>
+      </div>
+      <th mat-header-cell *matHeaderCellDef>{{nameDisplayedColumns[i]}}</th>
+      <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="dataSource?.data.length" [pageIndex]="0" [pageSize]="5" [pageSizeOptions]="[5]"
+    [fxHide]="!isDataAvaible">
+  </mat-paginator>
+</div>
